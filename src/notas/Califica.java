@@ -19,9 +19,11 @@ public class Califica {
         String calificacion = "";
         System.out.print("Introduzca una nota: ");
         nota = reader.nextInt();
+        // Este método llama al método de Notas.java
         calificacion = Notas_NetBeans.califica(nota);
+        // Se muestra por pantalla la calificación final.
         System.out.println(calificacion);
         reader.close();
     }
-    
+
 }
