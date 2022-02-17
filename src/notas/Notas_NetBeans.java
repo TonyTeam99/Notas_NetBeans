@@ -11,18 +11,24 @@ public class Notas_NetBeans {
 		System.out.print("Introduzca una nota: ");
 		nota = reader.nextInt();
 
-		if (nota >= 0 && nota < 5)
-			calificacion = "Suspenso";
-		else if (nota >= 5 && nota < 7)
-			calificacion = "Aprobado";
-		else if (nota >= 7 && nota < 9)
-			calificacion = "Notable";
-		else if (nota >= 9 && nota <= 10)
-			calificacion = "Sobresaliente";
-		else
-			calificacion = "La nota introducida no es correcta";
+        calificacion = cali(nota);
 
 		System.out.println(calificacion);
 		reader.close();
 	}
+
+    public static String cali(int nota) {
+        String calificacion;
+        if (nota >= 0 && nota < 5)
+            calificacion = "Suspenso";
+        else if (nota >= 5 && nota < 7)
+            calificacion = "Aprobado";
+        else if (nota >= 7 && nota < 9)
+            calificacion = "Notable";
+        else if (nota >= 9 && nota <= 10)
+            calificacion = "Sobresaliente";
+        else
+            calificacion = "La nota introducida no es correcta";
+        return calificacion;
+    }
 }
